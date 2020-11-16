@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
+
+/* make the root element - where all the jsx is rendered - take up 100% of the space
+ * the parent is set to 100vh/vw so the whole space is avaiable
+ * can then restrict element size within this */
+#root {
+  height: 100%;
+  width:100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.component-container {
+  height: 100%;
+  width: 100%;
+  background-color: red;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.chart-example {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3.5fr;
+  grid-template-rows: 1fr 6fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". ."
+    ". .";
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.chart {
+  margin: 0rem 2rem 2rem 0rem;
+}
+
+svg {
+  overflow: visible;
+  /*display: block;*/
+  width: 100%;
+  height: 100%;
+}
+
+.bar-chart {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  width: 80%;
+  padding: 0 50px 150px;
+  text-align: center;
+  box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  width: 100px;
+  border: 1px solid black;
+  margin: 0 auto 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+video {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: auto;
+  width: 100%;
 }
